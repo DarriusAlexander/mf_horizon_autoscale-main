@@ -1,0 +1,68 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+
+    - name: "Create a Docker Network: Domain_One"
+      docker_network:
+        name: docker_network_one 
+
+    - name: "Create a Docker Network: Domain_Two"
+      docker_network:
+        name: docker_network_two 
+
+    - name: "Run: CAC_INTEGRATION_DEV_1"
+      docker_container:
+        name: cac-1-dev-fd4ad7c5
+        detach: true
+        env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: CAC_INTEGRATION_DEV_2"
+      docker_container:
+        name: cac-2-dev-fd4ad7c5
+        detach: true
+        env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: CAC_INTEGRATION_DEV_2"
+      docker_container:
+        name: cac-3-dev-fd4ad7c5
+        detach: true
+        env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: CAC_INTEGRATION_DEV_4"
+      docker_container:
+        name: cac-4-dev-fd4ad7c5
+        detach: true
+        env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: CAC_INTEGRATION_DEV_5"
+      docker_container:
+        name: cac-5-dev-fd4ad7c5
+        detach: true
+        env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: MSA_INTEGRATION_DEV"
+      docker_container:
+        name: msa-1-dev-703f000
+        detach: true
+        env_file: /tmp/container/msa/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:msa-qa-703f000
+        restart: true 
+        network_mode: docker_network_two
+
+
+

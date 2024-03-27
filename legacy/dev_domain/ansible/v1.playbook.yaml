@@ -1,0 +1,21 @@
+
+- hosts: aws_ec2
+  become: true
+  tasks:
+
+  - name: install zip and unzip
+    apt:
+      pkg: 
+      - zip
+      - unzip
+
+  - name: Download AWS-CLI 
+    unarchive:
+      src: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+      dest: /home/ubuntu/
+      owner: ubuntu
+      remote_src: true
+
+  - name: Run Install for AWS-CLI
+    command: sh /home/ubuntu/aws/install
+    become: true

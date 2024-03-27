@@ -1,0 +1,105 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+			"Sid": "BaseUserRoleGeneralPolicies",
+			"Effect": "Allow",
+			"Action": [
+				"secretsmanager:Describe*",
+				"secretsmanager:Get*",
+				"secretsmanager:List*",
+				"ec2:DescribeInstances",
+				"ec2:DescribeImages",
+				"ec2:DescribeTags",
+				"ec2:DescribeSnapshots",
+				"ec2:DescribeInstanceTypes",
+				"cloudwatch:DescribeAlarms",
+				"cloudwatch:DescribeAlarmsForMetric",
+				"cloudwatch:ListMetrics",
+				"cloudwatch:GetMetricStatistics",
+				"cloudwatch:GetMetricData",
+				"iam:GetAccountPasswordPolicy",
+				"iam:GetAccountSummary",
+				"iam:ListVirtualMFADevices",
+                "iam:ListVirtualMFADevices"
+			],
+			"Resource": [
+				"*"
+			]
+		},
+        {
+			"Sid": "BaseUserRoleGeneralSelfManaged",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ChangePassword",
+				"iam:GetUser",
+                "iam:CreateAccessKey",
+				"iam:DeleteAccessKey",
+				"iam:ListAccessKeys",
+				"iam:UpdateAccessKey",
+                "iam:DeleteSigningCertificate",
+				"iam:ListSigningCertificates",
+				"iam:UpdateSigningCertificate",
+				"iam:UploadSigningCertificate",
+                "iam:DeleteSSHPublicKey",
+				"iam:GetSSHPublicKey",
+				"iam:ListSSHPublicKeys",
+				"iam:UpdateSSHPublicKey",
+				"iam:UploadSSHPublicKey",
+                "iam:CreateServiceSpecificCredential",
+				"iam:DeleteServiceSpecificCredential",
+				"iam:ListServiceSpecificCredentials",
+				"iam:ResetServiceSpecificCredential",
+				"iam:UpdateServiceSpecificCredential",
+                "iam:CreateVirtualMFADevice",
+				"iam:DeleteVirtualMFADevice",
+                "iam:DeactivateMFADevice",
+				"iam:EnableMFADevice",
+				"iam:ListMFADevices",
+				"iam:ResyncMFADevice"
+			],
+			"Resource": "arn:aws:iam::*:user/${aws:username}"
+		},
+        {
+			"Sid": "BaseUserRoleDenyAllExceptListedIfNoMFA",
+			"Effect": "Deny",
+			"NotAction": [
+				"iam:CreateVirtualMFADevice",
+				"iam:EnableMFADevice",
+				"iam:GetUser",
+                "iam:GetMFADevice",
+				"iam:ListMFADevices",
+				"iam:ListVirtualMFADevices",
+				"iam:ResyncMFADevice",
+				"sts:GetSessionToken"
+			],
+			"Resource": "*",
+			"Condition": {
+				"BoolIfExists": {
+					"aws:MultiFactorAuthPresent": "false"
+				}
+			}
+		},
+        {
+			"Sid": "BaseUserRoleSecretsManagerCRUD",
+			"Effect": "Allow",
+			"Action": [
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:ListSecretVersionIds",
+				"secretsmanager:DescribeSecret",
+				"secretsmanager:GetRandomPassword",
+				"secretsmanager:GetSecretValue",
+				"secretsmanager:ListSecretVersionIds",
+				"secretsmanager:ListSecrets"
+			],
+			"Resource": [
+				"arn:aws:secretsmanager:us-east-1:625524351863:secret:marinerfinance_dev_remote-TqYoQA",
+				"arn:aws:secretsmanager:us-east-1:625524351863:secret:mydb-credentials-xsy4Xr",
+				"arn:aws:secretsmanager:us-east-1:625524351863:secret:marinerfinance_development-fcLjJB",
+				"arn:aws:secretsmanager:us-east-1:625524351863:secret:marinerfinance_qa-F5B6RA"
+			]
+		}
+    ]
+}

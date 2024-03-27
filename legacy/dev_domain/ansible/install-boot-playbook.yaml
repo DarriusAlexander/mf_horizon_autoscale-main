@@ -1,0 +1,10 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+    - name: Copy shell script to remote server
+      copy:
+        src: ../base_boot.sh
+        dest: /tmp/boot.sh
+        mode: 0755
+
+ 

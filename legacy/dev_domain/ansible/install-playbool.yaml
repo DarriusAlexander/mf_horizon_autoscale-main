@@ -1,0 +1,10 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+    - name: Copy shell script to remote server
+      copy:
+        src: ../runner.v1.sh
+        dest: /tmp/run.sh
+        mode: 0755
+
+    

@@ -1,0 +1,137 @@
+- hosts: aws_ec2
+  become: true
+  tasks:
+    
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+
+    - name: Add Python3.11
+      apt_repository:
+        repo: ppa:deadsnakes/ppa
+        state: present
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - zip
+          - unzip
+          - python3.11
+          - apt-transport-https 
+          - ca-certificates 
+          - curl 
+          - software-properties-common
+          - virtualenv
+          - python3-setuptools
+          - build-essential
+          - checkinstall
+          - zlib1g-dev
+          - python3-pip
+          - openssl
+        state: latest
+        update_cache: true
+
+    - name: Download / Unarchive aws-cli
+      unarchive: 
+        src: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+        dest: /home/ubuntu 
+        owner: ubuntu
+        remote_src: true
+
+    - name: Execute AWS-CLI install
+      command: sh /home/ubuntu/aws/install
+      become: true
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+        state: present
+
+    - name: Update apt and install Docker-CE
+      apt:
+        name: docker-ce
+        state: latest
+        update_cache: true
+  
+    - name: Install Docker Module for Python
+      pip:
+        name: docker
+    
+    - name: Create Nginx Cert Folder
+      file:
+        path: /etc/nginx/certs/2023
+        state: directory
+        mode: '0755'
+
+    - name: Remove Nginx.Conf File
+      file:
+        path: /etc/nginx/nginx.conf
+        state: absent
+
+    - name: Remove Nginx.Sites-Available.Conf File
+      file:
+        path: /etc/nginx/sites-available/default
+        state: absent
+
+    - name: Remove Nginx.Sites-Available.Conf File
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: AWS GET Request Files for CAC-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/cac.qa.conf
+        dest: /etc/nginx/conf.d/cac.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for MSA-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/msa.qa.conf
+        dest: /etc/nginx/conf.d/msa.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for DCP-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/dcp.qa.conf
+        dest: /etc/nginx/conf.d/dcp.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for PSA-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/psa.qa.conf
+        dest: /etc/nginx/conf.d/psa.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for ESA-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/esa.qa.conf
+        dest: /etc/nginx/conf.d/esa.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for DSA-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/dsa.qa.conf
+        dest: /etc/nginx/conf.d/dsa.qa.conf
+        mode: get
+
+    - name: AWS GET Request Files for JSA-QA
+      amazon.aws.s3_bucket:
+        bucket: ops_scripts
+        object: /nginx/qa/jsa.qa.conf
+        dest: /etc/nginx/conf.d/jsa.qa.conf
+        mode: get
+
+

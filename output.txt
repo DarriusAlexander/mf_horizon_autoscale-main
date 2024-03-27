@@ -1,0 +1,1615 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0b2d926bf00e3758f",
+                    "InstanceId": "i-0fa621ce51835ce5f",
+                    "InstanceType": "t3a.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-01T22:45:33+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-1-74.ec2.internal",
+                    "PrivateIpAddress": "172.19.1.74",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-34-202-219-151.compute-1.amazonaws.com",
+                    "PublicIpAddress": "34.202.219.151",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-02-18T20:07:32+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0b022d01dee51459e"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/IAM-SSM-Service-Role-AutomationRoleInstanceProfile-Y66KUJL5Q97",
+                        "Id": "AIPAJRNEOVLADZUFRKLOK"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-34-202-219-151.compute-1.amazonaws.com",
+                                "PublicIp": "34.202.219.151"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-02-18T20:07:31+00:00",
+                                "AttachmentId": "eni-attach-03fcd5ca5fb8dfae9",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "QA-SecurityGroups-PrivatePSASecurityGroup-FB6D7MGJR9CZ",
+                                    "GroupId": "sg-695da217"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:d4:4a:35:30:6b",
+                            "NetworkInterfaceId": "eni-01c7b4084a12360a9",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-1-74.ec2.internal",
+                            "PrivateIpAddress": "172.19.1.74",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-34-202-219-151.compute-1.amazonaws.com",
+                                        "PublicIp": "34.202.219.151"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-1-74.ec2.internal",
+                                    "PrivateIpAddress": "172.19.1.74"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "QA-SecurityGroups-PrivatePSASecurityGroup-FB6D7MGJR9CZ",
+                            "GroupId": "sg-695da217"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "PSA-QA"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-02-18T20:07:31+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-043c81b15f15e5f1c"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-022453683b5ff6300",
+                    "InstanceId": "i-01860290841bd7538",
+                    "InstanceType": "t3a.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-01T22:52:17+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-1-160.ec2.internal",
+                    "PrivateIpAddress": "172.19.1.160",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-34-200-154-192.compute-1.amazonaws.com",
+                    "PublicIpAddress": "34.200.154.192",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-02-25T15:45:58+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-05d79def293327a32"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/RackspaceMinimumSSMRole",
+                        "Id": "AIPAZDJBIEN3UFIQXGSLX"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-34-200-154-192.compute-1.amazonaws.com",
+                                "PublicIp": "34.200.154.192"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-02-25T15:45:57+00:00",
+                                "AttachmentId": "eni-attach-0d5838a682614f0ef",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "QA-SecurityGroups-PrivateDSASecurityGroup-1Y1TH6AVMRIB5",
+                                    "GroupId": "sg-d65fa0a8"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:d4:c4:0b:b8:99",
+                            "NetworkInterfaceId": "eni-0edafe73e4948eee8",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-1-160.ec2.internal",
+                            "PrivateIpAddress": "172.19.1.160",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-34-200-154-192.compute-1.amazonaws.com",
+                                        "PublicIp": "34.200.154.192"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-1-160.ec2.internal",
+                                    "PrivateIpAddress": "172.19.1.160"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "QA-SecurityGroups-PrivateDSASecurityGroup-1Y1TH6AVMRIB5",
+                            "GroupId": "sg-d65fa0a8"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "DSA-QA"
+                        },
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-02-25T15:45:57+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-019a07884883e2ec4"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-28ec8f3e",
+                    "InstanceId": "i-02de0774619050118",
+                    "InstanceType": "t3a.large",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-17T20:35:09+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-6-90.ec2.internal",
+                    "PrivateIpAddress": "172.19.6.90",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-54-85-46-25.compute-1.amazonaws.com",
+                    "PublicIpAddress": "54.85.46.25",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4bbf5611",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2017-05-01T18:10:58+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-09d208bf4d95b101d"
+                            }
+                        }
+                    ],
+                    "ClientToken": "QA-AR-ARIns-VC2WV8NYHQIR",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/QA-AR-ESA-InstanceRoleInstanceProfile-4F0OTNC9S1KO",
+                        "Id": "AIPAJVV4OSFL7CT75VP4S"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-54-85-46-25.compute-1.amazonaws.com",
+                                "PublicIp": "54.85.46.25"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2017-05-01T18:10:57+00:00",
+                                "AttachmentId": "eni-attach-e95f16ba",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "QA-SecurityGroups-PublicESASecurityGroup-10LQFWP1HDZRM",
+                                    "GroupId": "sg-925ca3ec"
+                                },
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0e:de:a6:cc:33:10",
+                            "NetworkInterfaceId": "eni-1f92edc7",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-6-90.ec2.internal",
+                            "PrivateIpAddress": "172.19.6.90",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-54-85-46-25.compute-1.amazonaws.com",
+                                        "PublicIp": "54.85.46.25"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-6-90.ec2.internal",
+                                    "PrivateIpAddress": "172.19.6.90"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4bbf5611",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "QA-SecurityGroups-PublicESASecurityGroup-10LQFWP1HDZRM",
+                            "GroupId": "sg-925ca3ec"
+                        },
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "aws:cloudformation:stack-id",
+                            "Value": "arn:aws:cloudformation:us-east-1:625524351863:stack/QA-AR-ESA/269bace0-2e99-11e7-b280-500c286e4435"
+                        },
+                        {
+                            "Key": "aws:cloudformation:logical-id",
+                            "Value": "ARInstance"
+                        },
+                        {
+                            "Key": "aws:cloudformation:stack-name",
+                            "Value": "QA-AR-ESA"
+                        },
+                        {
+                            "Key": "Backup",
+                            "Value": "False"
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        },
+                        {
+                            "Key": "ServiceProvider",
+                            "Value": "Rackspace"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "ESA-QA"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2017-05-01T18:10:57+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-0680b93a04087a6f7"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-07ebfd5b3428b6f4d",
+                    "InstanceId": "i-0f868ae2918ca3fab",
+                    "InstanceType": "t3a.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-01T23:05:06+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-3-36.ec2.internal",
+                    "PrivateIpAddress": "172.19.3.36",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-208-188-138.compute-1.amazonaws.com",
+                    "PublicIpAddress": "3.208.188.138",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-05-12T11:22:10+00:00",
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "VolumeId": "vol-0a1f40f51b541f6e6"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/RackspaceMinimumSSMRole",
+                        "Id": "AIPAZDJBIEN3UFIQXGSLX"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-3-208-188-138.compute-1.amazonaws.com",
+                                "PublicIp": "3.208.188.138"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-03-30T22:02:08+00:00",
+                                "AttachmentId": "eni-attach-061c3490acf7d7ba5",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "MSA-mobile",
+                                    "GroupId": "sg-0510a486e8b411c79"
+                                },
+                                {
+                                    "GroupName": "External_Vendors",
+                                    "GroupId": "sg-0cbf17ddd52736657"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                },
+                                {
+                                    "GroupName": "mariner-jenkins-qa",
+                                    "GroupId": "sg-0e9c386984e60c8a9"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:96:41:a3:2c:73",
+                            "NetworkInterfaceId": "eni-0d656440ed80710c9",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-3-36.ec2.internal",
+                            "PrivateIpAddress": "172.19.3.36",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-3-208-188-138.compute-1.amazonaws.com",
+                                        "PublicIp": "3.208.188.138"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-3-36.ec2.internal",
+                                    "PrivateIpAddress": "172.19.3.36"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "MSA-mobile",
+                            "GroupId": "sg-0510a486e8b411c79"
+                        },
+                        {
+                            "GroupName": "External_Vendors",
+                            "GroupId": "sg-0cbf17ddd52736657"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        },
+                        {
+                            "GroupName": "mariner-jenkins-qa",
+                            "GroupId": "sg-0e9c386984e60c8a9"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "MSA-QA"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-03-30T22:02:08+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-0c5cddd11bc1aca79"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-067f741f8623dc9e6",
+                    "InstanceId": "i-0ccd6105ad9721b50",
+                    "InstanceType": "t3a.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-02T01:43:39+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-2-233.ec2.internal",
+                    "PrivateIpAddress": "172.19.2.233",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-34-192-111-16.compute-1.amazonaws.com",
+                    "PublicIpAddress": "34.192.111.16",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-04-30T13:55:38+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0c0fb5eca338891cb"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/QA-AR-DCP-InstanceRoleInstanceProfile-IRW8GRQALTHZ",
+                        "Id": "AIPAJWGTIUEYOO6JC2KFG"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-34-192-111-16.compute-1.amazonaws.com",
+                                "PublicIp": "34.192.111.16"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-04-30T13:55:37+00:00",
+                                "AttachmentId": "eni-attach-020b89c2a8c77e937",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "QA-SecurityGroups-PrivateDCPSecurityGroup-TTPO4B6WZQJ2",
+                                    "GroupId": "sg-f45ca38a"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:d3:f3:39:f8:3d",
+                            "NetworkInterfaceId": "eni-0d8e6d1c59da11dda",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-2-233.ec2.internal",
+                            "PrivateIpAddress": "172.19.2.233",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-34-192-111-16.compute-1.amazonaws.com",
+                                        "PublicIp": "34.192.111.16"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-2-233.ec2.internal",
+                                    "PrivateIpAddress": "172.19.2.233"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "QA-SecurityGroups-PrivateDCPSecurityGroup-TTPO4B6WZQJ2",
+                            "GroupId": "sg-f45ca38a"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "DCP-QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-04-30T13:55:37+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-0403e754216b7fc57"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0dba2cb6798deb6d8",
+                    "InstanceId": "i-0bf3da7935e3e189a",
+                    "InstanceType": "t2.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2022-09-16T18:07:33+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-0-135.ec2.internal",
+                    "PrivateIpAddress": "172.19.0.135",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-219-9-90.compute-1.amazonaws.com",
+                    "PublicIpAddress": "3.219.9.90",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-11-05T17:52:39+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-079158003e435f565"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/RackspaceMinimumSSMRole",
+                        "Id": "AIPAZDJBIEN3UFIQXGSLX"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-3-219-9-90.compute-1.amazonaws.com",
+                                "PublicIp": "3.219.9.90"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-11-05T17:52:34+00:00",
+                                "AttachmentId": "eni-attach-03777efe01fd8fd25",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "LoanScan-NonProd",
+                                    "GroupId": "sg-049db53c88c8dfdfb"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:46:ef:97:62:85",
+                            "NetworkInterfaceId": "eni-0dfa3ae512c801593",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-0-135.ec2.internal",
+                            "PrivateIpAddress": "172.19.0.135",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-3-219-9-90.compute-1.amazonaws.com",
+                                        "PublicIp": "3.219.9.90"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-0-135.ec2.internal",
+                                    "PrivateIpAddress": "172.19.0.135"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "LoanScan-NonProd",
+                            "GroupId": "sg-049db53c88c8dfdfb"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "NonProd-LoanScan"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 4,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-11-05T17:52:34+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-07bad0323e1441ffb"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-04505e74c0741db8d",
+                    "InstanceId": "i-017e669d42a042b2d",
+                    "InstanceType": "t3a.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2023-10-01T23:20:03+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-7-113.ec2.internal",
+                    "PrivateIpAddress": "172.19.7.113",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-233-55-30.compute-1.amazonaws.com",
+                    "PublicIpAddress": "3.233.55.30",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4bbf5611",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2022-01-11T04:21:07+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-06fb8c7c6040a67a3"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::625524351863:instance-profile/EC2-SSM-Access",
+                        "Id": "AIPAZDJBIEN3ZFYDJTTTC"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-3-233-55-30.compute-1.amazonaws.com",
+                                "PublicIp": "3.233.55.30"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2022-01-11T04:21:06+00:00",
+                                "AttachmentId": "eni-attach-0a4085daf818d4d9c",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "vpn-wordpress",
+                                    "GroupId": "sg-0db89073d4ad5293e"
+                                },
+                                {
+                                    "GroupName": "MSG_QA",
+                                    "GroupId": "sg-0f65afe45bbafe13f"
+                                },
+                                {
+                                    "GroupName": "Zuci-System-QA",
+                                    "GroupId": "sg-08f1d95a4472a0d0e"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0e:b9:45:8b:92:13",
+                            "NetworkInterfaceId": "eni-07f4a4255fb4a4db4",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-7-113.ec2.internal",
+                            "PrivateIpAddress": "172.19.7.113",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-3-233-55-30.compute-1.amazonaws.com",
+                                        "PublicIp": "3.233.55.30"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-7-113.ec2.internal",
+                                    "PrivateIpAddress": "172.19.7.113"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4bbf5611",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "vpn-wordpress",
+                            "GroupId": "sg-0db89073d4ad5293e"
+                        },
+                        {
+                            "GroupName": "MSG_QA",
+                            "GroupId": "sg-0f65afe45bbafe13f"
+                        },
+                        {
+                            "GroupName": "Zuci-System-QA",
+                            "GroupId": "sg-08f1d95a4472a0d0e"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "WPS-QA"
+                        },
+                        {
+                            "Key": "state",
+                            "Value": "started"
+                        },
+                        {
+                            "Key": "Patch Group",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Schedule",
+                            "Value": ""
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2022-01-11T04:21:06+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": true,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-028dd8a3934194893"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-052efd3df9dad4825",
+                    "InstanceId": "i-017dbbf9d864e4b62",
+                    "InstanceType": "t3.xlarge",
+                    "KeyName": "marinerfinance-us-east-1",
+                    "LaunchTime": "2022-07-19T13:48:15+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-6-244.ec2.internal",
+                    "PrivateIpAddress": "172.19.6.244",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-54-92-173-107.compute-1.amazonaws.com",
+                    "PublicIpAddress": "54.92.173.107",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4bbf5611",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2022-07-19T13:48:16+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-08a9da240a01a09ac"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "625524351863",
+                                "PublicDnsName": "ec2-54-92-173-107.compute-1.amazonaws.com",
+                                "PublicIp": "54.92.173.107"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2022-07-19T13:48:15+00:00",
+                                "AttachmentId": "eni-attach-0208c64453f9787f0",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "VPN-BOX-QA",
+                                    "GroupId": "sg-0e0c4169fa41d2980"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0e:ec:37:9e:32:db",
+                            "NetworkInterfaceId": "eni-081a84661207ec639",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-6-244.ec2.internal",
+                            "PrivateIpAddress": "172.19.6.244",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "625524351863",
+                                        "PublicDnsName": "ec2-54-92-173-107.compute-1.amazonaws.com",
+                                        "PublicIp": "54.92.173.107"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-6-244.ec2.internal",
+                                    "PrivateIpAddress": "172.19.6.244"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4bbf5611",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "VPN-BOX-QA",
+                            "GroupId": "sg-0e0c4169fa41d2980"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "OpenVPN"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2022-07-19T13:48:15+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": true,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    }
+                }
+            ],
+            "OwnerId": "625524351863",
+            "ReservationId": "r-05455f3e0d49815fe"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-5934df24",
+                    "InstanceId": "i-035be10d4acd3fddb",
+                    "InstanceType": "c5.large",
+                    "LaunchTime": "2023-10-06T05:29:59+00:00",
+                    "Monitoring": {
+                        "State": "enabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-19-3-126.ec2.internal",
+                    "PrivateIpAddress": "172.19.3.126",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-34-207-187-126.compute-1.amazonaws.com",
+                    "PublicIpAddress": "34.207.187.126",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-4744e90f",
+                    "VpcId": "vpc-e5bfa583",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2023-10-06T05:29:59+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0a15aa5cfd6653e12"
+                            }
+                        }
+                    ],
+                    "ClientToken": "57962c0d-db17-091c-ad24-7ece29522986",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-34-207-187-126.compute-1.amazonaws.com",
+                                "PublicIp": "34.207.187.126"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2023-10-06T05:29:59+00:00",
+                                "AttachmentId": "eni-attach-0be76145b447110d7",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "AlertLogic IDS Security Group 134270428/0F021153-09A1-469E-9B49-9C14CD51517F/us-east-1a/vpc-e5bfa583",
+                                    "GroupId": "sg-0688674c8c970a360"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:bd:96:9b:b1:95",
+                            "NetworkInterfaceId": "eni-0eab37f34ba0fb7ea",
+                            "OwnerId": "625524351863",
+                            "PrivateDnsName": "ip-172-19-3-126.ec2.internal",
+                            "PrivateIpAddress": "172.19.3.126",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "ec2-34-207-187-126.compute-1.amazonaws.com",
+                                        "PublicIp": "34.207.187.126"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-19-3-126.ec2.internal",
+                                    "PrivateIpAddress": "172.19.3.126"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4744e90f",
+                            "VpcId": "vpc-e5bfa583",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "AlertLogic IDS Security Group 134270428/0F021153-09A1-469E-9B49-9C14CD51517F/us-east-1a/vpc-e5bfa583",
+                            "GroupId": "sg-0688674c8c970a360"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "QA"
+                        },
+                        {
+                            "Key": "aws:cloudformation:stack-id",
+                            "Value": "arn:aws:cloudformation:us-east-1:625524351863:stack/alertLogic-IDS-QA/8214ba00-705c-11ea-a2a4-12a640cb526e"
+                        },
+                        {
+                            "Key": "aws:cloudformation:logical-id",
+                            "Value": "AutoScalingGroup"
+                        },
+                        {
+                            "Key": "AlertLogic-AccountID",
+                            "Value": "134270428"
+                        },
+                        {
+                            "Key": "AlertLogic-EnvironmentID",
+                            "Value": "0F021153-09A1-469E-9B49-9C14CD51517F"
+                        },
+                        {
+                            "Key": "aws:cloudformation:stack-name",
+                            "Value": "alertLogic-IDS-QA"
+                        },
+                        {
+                            "Key": "aws:autoscaling:groupName",
+                            "Value": "AlertLogic IDS Security Autoscaling Group 134270428/0F021153-09A1-469E-9B49-9C14CD51517F/us-east-1a/vpc-e5bfa583"
+                        },
+                        {
+                            "Key": "AlertLogic",
+                            "Value": "Security"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "AlertLogic IDS Security Appliance"
+                        },
+                        {
+                            "Key": "AlertLogic IDS Manual Mode Template Version",
+                            "Value": "v1.0.4"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2023-10-06T05:29:59+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": false,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    },
+                    "CurrentInstanceBootMode": "legacy-bios"
+                }
+            ],
+            "OwnerId": "625524351863",
+            "RequesterId": "940372691376",
+            "ReservationId": "r-03dd10078d37b2b94"
+        }
+    ]
+}

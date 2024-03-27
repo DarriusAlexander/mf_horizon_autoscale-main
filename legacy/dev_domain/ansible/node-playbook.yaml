@@ -1,0 +1,16 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+    - name: "Install: NVM and Node v14.21.3"
+      remote_user: ubuntu
+      shell: 
+        "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash -"
+    # - name: "Install node default (v14.21.3)" 
+    #   shell: 
+    #     "nvm install v14.21.3"
+    # - name: "User Node v14.21.3"
+    #   shell: 
+    #     "nvm use v14.21.3"
+    # - name: "Install npm packages"
+    #   shell: 
+    #     "npm i pm2 periodic-cli@1.1.4 nodemon -g"

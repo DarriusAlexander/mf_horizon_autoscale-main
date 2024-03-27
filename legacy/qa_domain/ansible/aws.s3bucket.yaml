@@ -1,0 +1,10 @@
+- hosts: aws_ec2
+  become: true
+  tasks:
+   
+    - name: Simple GET operation
+      amazon.aws.s3_object:
+        bucket: ops-s3-scripts
+        object: /nginx/qa/cac.qa.conf 
+        dest: /etc/nginx/conf.d/cac.qa.conf
+        mode: get

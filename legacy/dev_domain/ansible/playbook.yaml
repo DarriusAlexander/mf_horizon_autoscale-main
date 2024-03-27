@@ -1,0 +1,60 @@
+- hosts: aws_ec2
+  become: yes
+  tasks:
+    - name: "Run: CAC_INTEGRATION_DEV"
+      docker_container:
+        name: cac-2-dev-fd4ad7c5
+        detach: true env_file: /tmp/container/cac/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:cac-dev-fd4ad7c5
+        restart: true 
+        network_mode: docker_network_one
+
+    - name: "Run: MSA_INTEGRATION_DEV"
+      docker_container:
+        name: msa-1-dev-703f000
+        detach: true
+        env_file: /tmp/container/msa/.env
+        image: 625524351863.dkr.ecr.us-east-1.amazonaws.com/marinerfinance_ecr:msa-qa-703f000
+        restart: true 
+        network_mode: docker_network_two
+
+
+    # - name: "Create a Docker Network: Domain_One"
+    #   docker_network:
+    #     name: docker_network_one 
+
+    # - name: "Create a Docker Network: Domain_Two"
+    #   docker_network:
+    #     name: docker_network_two 
+
+
+    # - name: Copy shell script to remote server
+    #   copy:
+    #     src: ../runner.v1.sh
+    #     dest: /tmp/runner.v1.sh
+    #     mode: 0755
+
+    # - name: Run shell script on remote server
+    #   shell: sh /tmp/runner.v1.sh
+    # - name: Install NVM
+    #   shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash -
+    # - name: Edit Bashrc File
+    #   command: sh .bashrc
+    # - name: Edit bashr file
+    #   sudo: yes
+    #   sudo_user: ""
+    #   command: bash -c '. ~/.bashrc'
+    # - name: Install Node v14.21.3
+    #   shell: nvm install v14.21.3
+    # - name: User Node v14.21.3
+    #   shell: nvm use v14.21.3
+    # - name: Install global npm packages
+    #   shell: npm -i pm2 periodicjs -g
+    # - name: Pull down runner.
+    #   shell: aws s3 cp s3://ops-s3-scripts/user_data/runner.v1.sh installer.sh 
+    # - name: Change permission
+    #   shell: sudo chmod +x installer.sh
+    # - name: Run Installer
+    #   shell: ./installer.sh
+    # - name: Change ownership of directory
+    #   shell: sudo chown -R ubuntu:ubuntu /var/www/*
